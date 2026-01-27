@@ -1,34 +1,36 @@
-{
+module.exports =
+    {
 
-    "default": {
+    default: {
 
-        "paths": [
+        tags: process.env.npm_config_TAGS || "",
+        paths: [
 
             "tests/features/"
 
         ],
 
-        "require": [
+        require: [
 
             "tests/steps/*.ts",
             "tests/hooks.ts"
 
         ],
     
-        "dryRun":false,
-        "parallel":4,
+        dryRun:false,
+        parallel:4,
 
-        "formatOptions": {
+        formatOptions: {
 
-            "snippetInterface": "async-await"
+            snippetInterface: "async-await"
 
         },
 
-        "requireModule":[
+        requireModule:[
             "ts-node/register"
         ],
 
-        "format": [
+        format: [
 
             [
 
